@@ -1,12 +1,4 @@
-import random, math, sys
-from importlib import import_module
-
-try:
-    pygame = import_module("pygame")
-except ModuleNotFoundError as exc:
-    if exc.name != "pygame":
-        raise
-    raise SystemExit("AudioRipple requires pygame; install it with `python -m pip install pygame`.") from exc
+import pygame, random, math, sys
 W,H = 1000, 700
 pygame.init()
 s = pygame.display.set_mode((W,H), pygame.DOUBLEBUF|pygame.HWSURFACE)
